@@ -35,7 +35,11 @@ const Partner = ({ partners }) => {
             >
               {partners.map((partner, index) => {
                 if (index > 10) return '';
-                return <Item_partner partner={partner}> </Item_partner>;
+                return (
+                  <Item_partner key={index} partner={partner}>
+                    {' '}
+                  </Item_partner>
+                );
               })}
             </div>
           </div>

@@ -113,7 +113,7 @@ const Admissions = () => {
 
   return (
     <div>
-      <div class="container">
+      <div className="container">
         <center>
           {' '}
           <h1> Selection </h1>

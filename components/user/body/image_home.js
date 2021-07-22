@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/Image';
 function Image_home({ srcImage, x, y }) {
   let parallax = `&quot;y&quot;:${y}, &quot;x&quot;: ${x},  &quot;smoothness&quot;: 50 }`;
 
@@ -8,7 +8,7 @@ function Image_home({ srcImage, x, y }) {
       className="box-img-animate-item"
       data-parallax-scroll='{"y":0, "x": 140,  "smoothness": 50 }'
     >
-      <img src={srcImage.image} width="271px" alt={srcImage.image} />
+      <Image src={srcImage.image} width="271px" alt={srcImage.image} />
     </div>
   );
 }

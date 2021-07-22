@@ -1,5 +1,6 @@
 import React from 'react';
 import parse from 'html-react-parser';
+import Image from 'next/image';
 
 function ItemNew(props) {
   if (props.content && props.content != 'undefined') {
@@ -12,7 +13,7 @@ function ItemNew(props) {
           <h4 className="post-corporate-title">
             <a href="#">{props.title}</a>
           </h4>
-          <img src="images/covid19.png" width={270} height={121} />
+          <Image src="images/covid19.png" width={270} height={121} />
           <div className="post-corporate-text">
             <p>{parse(props.content)}</p>
           </div>

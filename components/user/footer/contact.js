@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { sendEmailContact } from '../../api/resource';
+import Image from 'next/image';
+
 const Contact = () => {
   let [form, setForm] = useState({});
   const onHandleForm = (event) => {
@@ -21,7 +23,7 @@ const Contact = () => {
         data-parallax-img="images/parallax-img-2.jpg"
       >
         <div className="material-parallax parallax">
-          <img
+          <Image
             src="https://livedemo00.template-help.com/wt_prod-22894/images/parallax-img-2.jpg"
             alt
             style={{

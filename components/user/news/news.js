@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 const OwlCarousel = dynamic(import('react-owl-carousel'));
 import config from '../../api/config';
 import ItemNew from './itemNew';
+import Index from './../index';
 
 const News = ({ news }) => {
   return (
@@ -37,8 +38,9 @@ const News = ({ news }) => {
                 width: 3173,
               }}
             >
-              {news.map((value) => (
+              {news.map((value, index) => (
                 <ItemNew
+                  key={index}
                   _time={value._time}
                   content={value.content}
                   title={value.title}

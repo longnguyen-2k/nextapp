@@ -2,6 +2,8 @@ import axios from 'axios';
 import config_momo from '../../../config';
 import React, { useState, useEffect } from 'react';
 import GooglePay from './googleButton';
+import Image from 'next/image';
+
 // import IconMomo from '../../../icon-momo.svg';
 // import IconGoogle from '../../icon-google.svg';
 import CryptoJS from 'crypto-js';
@@ -172,7 +174,7 @@ const Donate = (props) => {
                           </div>
                           <div className="row justify-content-center">
                             <div className="col-5 fit-image">
-                              <img
+                              <Image
                                 src="https://i.imgur.com/NnVWuER.png"
                                 height="200px"
                                 width="200px"
@@ -322,7 +324,7 @@ const Donate = (props) => {
                                       $10 is the minimum online donation. All
                                       donations are tax deductible.
                                     </p>
-                                    <img src="icon-google.svg" />
+                                    <Image src="icon-google.svg" />
                                     <p className="mb-4">
                                       sThe safer, easier way to pay by Google
                                       Pay
@@ -433,7 +435,7 @@ const Donate = (props) => {
                                         $10 is the minimum online donation. All
                                         donations are tax deductible.
                                       </p>
-                                      <img
+                                      <Image
                                         className="img-responsive mt-4"
                                         src="images/lien-ket-vi-momo.png"
                                         alt="momo banking"

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 function Item_partner({ partner }) {
   return (
@@ -12,7 +13,7 @@ function Item_partner({ partner }) {
           }}
         >
           <a href={partner.link ? partner.link : '#'}></a>
-          <img
+          <Image
             src={partner.image ? partner.image : '#'}
             width={270}
             height={121}

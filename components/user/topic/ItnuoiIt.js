@@ -19,8 +19,11 @@ const ItnuoiIt = ({ itnuoiits }) => {
           </div>
           <div className="row row-50">
             {itnuoiits
-              ? itnuoiits.map((itnuoiit) => (
-                  <Item_itnuoiit itnuoiit={itnuoiit}></Item_itnuoiit>
+              ? itnuoiits.map((itnuoiit, index) => (
+                  <Item_itnuoiit
+                    key={index}
+                    itnuoiit={itnuoiit}
+                  ></Item_itnuoiit>
                 ))
               : ''}
           </div>

@@ -1,11 +1,13 @@
 import React from 'react';
+import Image from 'next/image';
+
 function Item_itnuoiit({ itnuoiit }) {
   return (
     <div className="col-md-6 col-lg-4 wow-outer">
       <div className="wow fadeInUp">
         <article className="box-causes">
           <div className="box-causes-img">
-            <img src={itnuoiit.image} alt="" width={372} height={396} />
+            <Image src={itnuoiit.image} alt="" width={372} height={396} />
             <a
               type="button"
               data-toggle="modal"

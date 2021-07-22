@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Image from 'next/image';
 
 class footer extends Component {
   render() {
@@ -125,9 +126,8 @@ class footer extends Component {
                       <a
                         title="PN on Facebook"
                         href="https://www.facebook.com/passerelles.numeriques"
-                        target="_blank"
                       >
-                        <img
+                        <Image
                           style={{ width: '27px' }}
                           src="images/Facebook.svg"
                         />
@@ -137,9 +137,8 @@ class footer extends Component {
                       <a
                         title="PN on Twitter"
                         href="https://twitter.com/passerellesnume"
-                        target="_blank"
                       >
-                        <img
+                        <Image
                           style={{ width: '27px' }}
                           src="images/Twitter.svg"
                         />
@@ -149,9 +148,8 @@ class footer extends Component {
                       <a
                         title="PN on LinkedIn"
                         href="https://www.linkedin.com/company/455759"
-                        target="_blank"
                       >
-                        <img
+                        <Image
                           style={{ width: '27px' }}
                           src="images/LinkedIn.svg"
                         />
@@ -161,9 +159,8 @@ class footer extends Component {
                       <a
                         title="PN on YouTube"
                         href="https://www.youtube.com/user/PasserellesNumerique"
-                        target="_blank"
                       >
-                        <img
+                        <Image
                           style={{ width: '27px' }}
                           src="images/youtube.png"
                         />

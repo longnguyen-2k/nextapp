@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Image from 'next/image';
 const Target = ({ targets }) => {
   return (
     <section
@@ -10,7 +11,7 @@ const Target = ({ targets }) => {
         <div className="row row-50 justify-content-center align-items-lg-center">
           <div className="col-lg-6 col-xl-5 wow-outer">
             <div className="wow slideInLeft">
-              <img
+              <Image
                 src="images/cotrang.PNG"
                 alt="mr.Trang"
                 width={471}

@@ -39,7 +39,12 @@ const ourMissi = ({ srcImages }) => {
                       y = 60;
                     }
                     return (
-                      <Image_home srcImage={srcImage} x={x} y={y}></Image_home>
+                      <Image_home
+                        key={index}
+                        srcImage={srcImage}
+                        x={x}
+                        y={y}
+                      ></Image_home>
                     );
                   })
                 : ''}
