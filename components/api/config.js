@@ -1,5 +1,5 @@
 const config = {
-  prefixUrl: 'http://localhost:8000/api',
+ prefixUrl: 'https://long2k123.000webhostapp.com/api',
 };
 
 export default config;
