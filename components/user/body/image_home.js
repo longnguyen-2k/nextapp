@@ -8,7 +8,12 @@ function Image_home({ srcImage, x, y }) {
       className="box-img-animate-item"
       data-parallax-scroll='{"y":0, "x": 140,  "smoothness": 50 }'
     >
-      <Image src={srcImage.image} width="271px" alt={srcImage.image} />
+      <Image
+        src={srcImage.image}
+        width="271px"
+        height="271px"
+        alt={srcImage.image}
+      />
     </div>
   );
 }

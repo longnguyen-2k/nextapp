@@ -512,17 +512,6 @@ a[href*='tel'], a[href*='mailto'] {
 	z-index: 1;
 }
 
-.block-decorate-img:before {
-	position: absolute;
-	content: '';
-	top: 20px;
-	right: 60px;
-	left: 0;
-	bottom: 0;
-	background: url("../images/bg-dot.png");
-	opacity: .2;
-	z-index: 0;
-}
 
 @media (min-width: 992px) {
 	.block-decorate-img {
@@ -1210,20 +1199,8 @@ a[href*='tel'], a[href*='mailto'] {
 	padding: 30px;
 }
 
-.testimonials-modern:before {
-	position: absolute;
-	content: '';
-	top: 50%;
-	left: 50%;
-	width: 100%;
-	height: 100%;
-	max-width: 420px;
-	max-height: 250px;
-	background: url("../images/bg-dot.png");
-	transform: translate(-50%, -50%);
-	opacity: .15;
-	z-index: 0;
-}
+
+
 
 @media (min-width: 992px) {
 	.testimonials-modern {
@@ -1736,18 +1713,8 @@ a[href*='tel'], a[href*='mailto'] {
 	overflow: hidden;
 }
 
-@media (min-width: 1200px) {
-	.box-sponsor.box-sponsor-modern:before {
-		position: absolute;
-		content: url("../images/sponsor-img-hover.png");
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		will-change: transform;
-		transition: all .3s;
-		opacity: 0;
-	}
-}
+
+
 
 .box-sponsor.box-sponsor-modern img {
 	opacity: .6;
@@ -1852,13 +1819,9 @@ a[href*='tel'], a[href*='mailto'] {
 	}
 }
 
-.bunner-content-modern .box-location {
-	padding: 20px;
-	text-transform: uppercase;
-	letter-spacing: .05em;
-	opacity: .8;
-	background: url("../images/bg-brush.png") center no-repeat;
-}
+
+
+
 
 .bunner-content-modern .box-location h4 {
 	font-weight: 800;
@@ -3706,17 +3669,7 @@ ul.blog-post-meta li .icon {
 	z-index: 1;
 }
 
-.post-classic-caption:before {
-	position: absolute;
-	content: '';
-	top: 10px;
-	right: 0;
-	left: 55%;
-	bottom: 0;
-	background: url("../images/bg-dot.png") center;
-	opacity: .2;
-	z-index: 0;
-}
+
 
 .post-classic-meta {
 	font-size: 18px;
@@ -4375,9 +4328,6 @@ ul.blog-post-meta li .icon {
 	opacity: 1;
 }
 
-html.boxed body {
-	background: #edeff4 url(../images/bg-pattern-boxed.png) repeat fixed;
-}
 
 @media (min-width: 1630px) {
 	html.boxed .page {
@@ -4516,16 +4466,6 @@ html.boxed body {
 	}
 }
 
-@font-face {
-	font-family: 'TuesdayNigrh';
-	src: url("../fonts/TuesdayNight-Regular.otf");
-}
-
-@font-face {
-	font-family: 'Henrik';
-	src: url("../fonts/Henrik-Regular.otf");
-	src: url("../fonts/Henrik-Regular.woff") format("woff");
-}
 
 .text-accent-2 {
 	font-family: 'TuesdayNigrh';
@@ -5004,17 +4944,6 @@ html [class*='section-'].section-bottom-0 {
 	}
 }
 
-.section-main-bunner:after {
-	content: '';
-	z-index: 10;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: -2px;
-	height: 66px;
-	background-image: url("../images/decor-wave-bottom.png");
-}
-
 .section-main-bunner .main-bunner-title {
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -5476,16 +5405,7 @@ html [class*='section-'].section-bottom-0 {
 	position: relative;
 }
 
-.bg-default-decor:before {
-	content: '';
-	position: absolute;
-	z-index: 1;
-	left: 0;
-	right: 0;
-	bottom: calc( 100% - 2px);
-	height: 65px;
-	background-image: url("../images/decor-wave-bottom.png");
-}
+
 
 .bg-gray-100 {
 	background-color: #edeff4;
@@ -5523,16 +5443,8 @@ html [class*='section-'].section-bottom-0 {
 	position: relative;
 }
 
-.bg-gray-1-decor:before {
-	content: '';
-	position: absolute;
-	z-index: 1;
-	left: 0;
-	right: 0;
-	bottom: calc( 100% - 2px);
-	height: 65px;
-	background-image: url("../images/decor-gray-top.png");
-}
+
+
 
 /*
 * Dark Backgrounds
@@ -5665,17 +5577,8 @@ html [class*='section-'].section-bottom-0 {
 	z-index: 1;
 }
 
-.bg-dot:before {
-	position: absolute;
-	content: '';
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: url("../images/bg-dot.png");
-	opacity: .2;
-	z-index: 0;
-}
+
+
 
 .bg-dots-light {
 	position: relative;
@@ -5686,17 +5589,7 @@ html [class*='section-'].section-bottom-0 {
 	z-index: 1;
 }
 
-.bg-dots-light:before {
-	position: absolute;
-	content: '';
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: url("../images/bg-dot-light.png");
-	opacity: .04;
-	z-index: 0;
-}
+
 
 .bg-decorate {
 	position: relative;
@@ -5708,17 +5601,8 @@ html [class*='section-'].section-bottom-0 {
 	z-index: 2;
 }
 
-.bg-decorate:before {
-	position: absolute;
-	content: '';
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: url("../images/bg-dot-light.png");
-	opacity: .04;
-	z-index: 0;
-}
+
+
 
 .bg-decorate:after {
 	position: absolute;

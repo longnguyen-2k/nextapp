@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ButtonDonate from '../formDonate/buttonDonate';
-import Donate from '../formDonate/donate';
 import Image from 'next/image';
 class Header extends Component {
   render() {
@@ -16,13 +15,7 @@ class Header extends Component {
               className="navbar-brand"
               href="https://www.passerellesnumeriques.org/"
             >
-              <Image
-                src="https://www.passerellesnumeriques.org/misc/logo-en.png"
-                alt="Logo"
-                data-actual-width="538"
-                data-actual-height="193"
-                style={{ width: '120px' }}
-              />
+              <Image src="/logoen.png" alt="Logo" width="120px" height="80px" />
             </a>
             <button
               className="navbar-toggler"

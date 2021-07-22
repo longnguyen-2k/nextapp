@@ -41,6 +41,8 @@ const ourMissi = ({ srcImages }) => {
                     return (
                       <Image_home
                         key={index}
+                        width="200px"
+                        height="200px"
                         srcImage={srcImage}
                         x={x}
                         y={y}

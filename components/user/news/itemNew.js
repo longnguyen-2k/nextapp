@@ -13,7 +13,7 @@ function ItemNew(props) {
           <h4 className="post-corporate-title">
             <a href="#">{props.title}</a>
           </h4>
-          <Image src="images/covid19.png" width={270} height={121} />
+          <Image src="/images/covid19.png" width="270px" height="121px" />
           <div className="post-corporate-text">
             <p>{parse(props.content)}</p>
           </div>

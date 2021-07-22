@@ -128,8 +128,9 @@ class footer extends Component {
                         href="https://www.facebook.com/passerelles.numeriques"
                       >
                         <Image
-                          style={{ width: '27px' }}
-                          src="images/Facebook.svg"
+                          width="27px"
+                          height="27px"
+                          src="/images/Facebook.svg"
                         />
                       </a>
                     </li>
@@ -139,8 +140,9 @@ class footer extends Component {
                         href="https://twitter.com/passerellesnume"
                       >
                         <Image
-                          style={{ width: '27px' }}
-                          src="images/Twitter.svg"
+                          width="27px"
+                          height="27px"
+                          src="/images/Twitter.svg"
                         />
                       </a>
                     </li>
@@ -148,10 +150,13 @@ class footer extends Component {
                       <a
                         title="PN on LinkedIn"
                         href="https://www.linkedin.com/company/455759"
+                        width="27px"
+                        height="27px"
                       >
                         <Image
-                          style={{ width: '27px' }}
-                          src="images/LinkedIn.svg"
+                          src="/images/LinkedIn.svg"
+                          width="27px"
+                          height="27px"
                         />
                       </a>
                     </li>
@@ -161,8 +166,9 @@ class footer extends Component {
                         href="https://www.youtube.com/user/PasserellesNumerique"
                       >
                         <Image
-                          style={{ width: '27px' }}
-                          src="images/youtube.png"
+                          src="/images/youtube.png"
+                          width="27px"
+                          height="27px"
                         />
                       </a>
                     </li>

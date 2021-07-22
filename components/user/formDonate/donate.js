@@ -175,7 +175,7 @@ const Donate = (props) => {
                           <div className="row justify-content-center">
                             <div className="col-5 fit-image">
                               <Image
-                                src="https://i.imgur.com/NnVWuER.png"
+                                src="/NnVWuER.png"
                                 height="200px"
                                 width="200px"
                               />
@@ -324,7 +324,11 @@ const Donate = (props) => {
                                       $10 is the minimum online donation. All
                                       donations are tax deductible.
                                     </p>
-                                    <Image src="icon-google.svg" />
+                                    <Image
+                                      src="/icon-google.svg"
+                                      width="372px"
+                                      height="396px"
+                                    />
                                     <p className="mb-4">
                                       sThe safer, easier way to pay by Google
                                       Pay
@@ -437,8 +441,10 @@ const Donate = (props) => {
                                       </p>
                                       <Image
                                         className="img-responsive mt-4"
-                                        src="images/lien-ket-vi-momo.png"
+                                        src="/images/lien-ket-vi-momo.png"
                                         alt="momo banking"
+                                        width="372px"
+                                        height="396px"
                                       />
                                       <p className=" mb-4">
                                         The safer, easier way to pay by MOMO

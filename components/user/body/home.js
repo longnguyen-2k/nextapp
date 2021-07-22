@@ -13,7 +13,7 @@ class Home extends Component {
             <div
               className="main-bunner-img"
               style={{
-                backgroundImage: 'url("images/anh4.jpg")',
+                backgroundImage: 'url("/images/anh4.jpg")',
                 backgroundSize: 'cover',
               }}
             />
@@ -45,7 +45,7 @@ class Home extends Component {
             <div
               className="main-bunner-img"
               style={{
-                backgroundImage: 'url("images/anh5.jpg")',
+                backgroundImage: 'url("/images/anh5.jpg")',
                 backgroundSize: 'cover',
               }}
             />
@@ -80,7 +80,7 @@ class Home extends Component {
             <div
               className="main-bunner-img"
               style={{
-                backgroundImage: 'url("images/anh13.jpg")',
+                backgroundImage: 'url("/images/anh13.jpg")',
                 backgroundSize: 'cover',
               }}
             />

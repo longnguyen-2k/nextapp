@@ -7,7 +7,7 @@ function Item_itnuoiit({ itnuoiit }) {
       <div className="wow fadeInUp">
         <article className="box-causes">
           <div className="box-causes-img">
-            <Image src={itnuoiit.image} alt="" width={372} height={396} />
+            <Image src={itnuoiit.image} alt="" width="372pxs" height="396px" />
             <a
               type="button"
               data-toggle="modal"

@@ -12,10 +12,10 @@ const Target = ({ targets }) => {
           <div className="col-lg-6 col-xl-5 wow-outer">
             <div className="wow slideInLeft">
               <Image
-                src="images/cotrang.PNG"
+                src="/images/cotrang.PNG"
                 alt="mr.Trang"
-                width={471}
-                height={327}
+                width="471px"
+                height="327px"
               />
             </div>
           </div>

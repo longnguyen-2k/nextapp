@@ -33,10 +33,10 @@ class latestCause extends Component {
                 <article className="box-causes">
                   <div className="box-causes-img">
                     <Image
-                      src="images/causes-01-372x396.jpg"
+                      src="/images/causes-01-372x396.jpg"
                       alt=""
-                      width={372}
-                      height={396}
+                      width="372px"
+                      height="396px"
                     />
                     <a className="button button-sm button-primary" href="#">
                       Donate
@@ -60,10 +60,10 @@ class latestCause extends Component {
                 <article className="box-causes">
                   <div className="box-causes-img">
                     <Image
-                      src="images/causes-02-372x396.jpg"
+                      src="/images/causes-02-372x396.jpg"
                       alt=""
-                      width={372}
-                      height={396}
+                      width="372px"
+                      height="396px"
                     />
                     <a className="button button-sm button-primary" href="#">
                       Donate
@@ -87,10 +87,10 @@ class latestCause extends Component {
                 <article className="box-causes">
                   <div className="box-causes-img">
                     <Image
-                      src="images/causes-03-372x396.jpg"
+                      src="/images/causes-03-372x396.jpg"
                       alt=""
-                      width={372}
-                      height={396}
+                      width="372px"
+                      height="396px"
                     />
                     <a className="button button-sm button-primary" href="#">
                       Donate

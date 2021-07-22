@@ -3,7 +3,7 @@ const Button = () => {
     <a
       type="button"
       data-toggle="modal"
-      data-target="#donateModel"
+      data-target="#donateModelb"
       className="site-button bg-orange nav-link"
       href="#donate"
     >
