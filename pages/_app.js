@@ -1,4 +1,3 @@
-import Layout from '../components/layout';
 import '../styles/globals.css';
 import '../styles/button.css';
 import '../public/css/bootstrap.css';
