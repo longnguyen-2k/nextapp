@@ -1,25 +1,27 @@
 import axios from 'axios';
 import config_momo from '../../../config';
 import React, { useState, useEffect } from 'react';
-import GooglePayButton from '@google-pay/button-react';
+import GooglePay from './googleButton';
 // import IconMomo from '../../../icon-momo.svg';
 // import IconGoogle from '../../icon-google.svg';
 import CryptoJS from 'crypto-js';
 
-function Donate(props) {
+import Swal from 'sweetalert2';
+
+const Donate = (props) => {
   const [isActive, setActive] = useState([false, false, false, false]);
   let [QRcode, setQRcode] = useState();
   let [amount, setAmount] = useState(Number);
   let [form, setForm] = useState();
+
   const onHandleForm = (event) => {
     let value = event.target.value;
     let name = event.target.name;
     setForm((prevState) => {
       return { ...prevState, [name]: value };
     });
-
-    console.log(form);
   };
+
   const creatForm = (data) => {
     let body = new FormData();
     for (const key in data) {
@@ -27,10 +29,10 @@ function Donate(props) {
     }
     return body;
   };
-  const toggleClass = (index, ortherID = 1) => {
-    //index ==4 tức là cái input orther amount
+  const toggleClass = (index, otherID = 1) => {
+    //index ==4 tức là cái input other amount
     if (index != 4) {
-      document.getElementById('orther' + ortherID).value = '';
+      document.getElementById('other' + otherID).value = '';
     }
     let temp = [...isActive];
     for (let index = 0; index < temp.length; index++) {
@@ -54,7 +56,7 @@ function Donate(props) {
   };
 
   const payWithMomoATM = (amount) => {
-    let url = 'http://localhost:8000/api/momoATM';
+    let url = 'http://localhost:8000/api/momoATM2';
     axios
       .post(
         url,
@@ -66,7 +68,22 @@ function Donate(props) {
         })
       )
       .then((res) => {
-        window.location.assign(res.data.payUrl);
+        if (res.data == 'undefined') {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            footer: '<a href="">Why do I have this issue?</a>',
+          });
+        } else window.location.assign(res.data.payUrl);
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!',
+          footer: '<a href="">Why do I have this issue?</a>',
+        });
       });
   };
   let createSignature = (data, secretkey) => {
@@ -81,19 +98,18 @@ function Donate(props) {
   };
   const createQR = (amount) => {
     setAmount(amount);
+    // du lieu cho QR bussiess
+
+    // `https://test-payment.momo.vn/pay/store/${config_momo.storeSlug}?a=${
+    //       amount * 23000
+    //     }&b=${id}&s=${createSignature(
+    //       `storeSlug=${config_momo.storeSlug}&amount=${
+    //         amount * 23000
+    //       }&billId=${id}`,
+    //       config_momo.secretkey
+    //     )}`
     let id = new Date().getMilliseconds();
-    setQRcode(
-      createUrlQR(
-        `https://test-payment.momo.vn/pay/store/${config_momo.storeSlug}?a=${
-          amount * 23000
-        }&b=${id}&s=${createSignature(
-          `storeSlug=${config_momo.storeSlug}&amount=${
-            amount * 23000
-          }&billId=${id}`,
-          config_momo.secretkey
-        )}`
-      )
-    );
+    setQRcode(createUrlQR('https://nhantien.momo.vn/sSQ4fPSEADY' + amount));
   };
   useEffect(() => {
     let id = new Date().getMilliseconds();
@@ -300,7 +316,7 @@ function Donate(props) {
                                       createQR={createQR}
                                       isActive={isActive}
                                       toggleClass={toggleClass}
-                                      ortherID={1}
+                                      otherID={1}
                                     />
                                     <p>
                                       $10 is the minimum online donation. All
@@ -308,7 +324,8 @@ function Donate(props) {
                                     </p>
                                     <img src="icon-google.svg" />
                                     <p className="mb-4">
-                                      The safer, easier way to pay by Google Pay
+                                      sThe safer, easier way to pay by Google
+                                      Pay
                                     </p>
                                     <GooglePay
                                       amount={amount}
@@ -343,7 +360,7 @@ function Donate(props) {
                                     createQR={createQR}
                                     isActive={isActive}
                                     toggleClass={toggleClass}
-                                    ortherID={2}
+                                    otherID={2}
                                   />
                                   <p>
                                     $10 is the minimum online donation. All
@@ -358,17 +375,25 @@ function Donate(props) {
                             onClick={() => {
                               props.payWithMomoATM(props.amount);
                             }}
-                          >
-                            Donate
+                      Donate
                           </button> */}
                                   <h2 className="mt-3">
                                     {' '}
                                     Scan QR Code To Donate Us{' '}
                                   </h2>
-                                  <img
+                                  {/* <img
                                     className="mt-5"
                                     src={QRcode}
                                     alt="QR code"
+                                  /> */}
+
+                                  <iframe
+                                    src={
+                                      'https://nhantien.momo.vn/sSQ4fPSEADY/' +
+                                      amount
+                                    }
+                                    height="650px"
+                                    width="450px"
                                   />
                                   <p className="mb-5"> QR code by MOMO</p>
                                   <br />
@@ -402,7 +427,7 @@ function Donate(props) {
                                         createQR={createQR}
                                         isActive={isActive}
                                         toggleClass={toggleClass}
-                                        ortherID={3}
+                                        otherID={3}
                                       />
                                       <p>
                                         $10 is the minimum online donation. All
@@ -488,62 +513,6 @@ function Donate(props) {
       </div>
     </div>
   );
-}
-const GooglePay = (props) => {
-  return (
-    <GooglePayButton
-      environment="TEST"
-      paymentRequest={{
-        apiVersion: 2,
-        apiVersionMinor: 0,
-        allowedPaymentMethods: [
-          {
-            type: 'CARD',
-            parameters: {
-              allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
-              allowedCardNetworks: ['MASTERCARD', 'VISA'],
-            },
-            tokenizationSpecification: {
-              type: 'PAYMENT_GATEWAY',
-              parameters: {
-                gateway: 'example',
-                gatewayMerchantId: 'exampleGatewayMerchantId',
-              },
-            },
-          },
-        ],
-        merchantInfo: {
-          merchantId: '12345678901234567890',
-          merchantName: 'Demo Merchant',
-        },
-        transactionInfo: {
-          totalPriceStatus: 'FINAL',
-          totalPriceLabel: 'Total',
-          totalPrice: props.amount ? props.amount.toString() : '15',
-          currencyCode: 'USD',
-          countryCode: 'US',
-        },
-        shippingAddressRequired: true,
-        callbackIntents: ['SHIPPING_ADDRESS', 'PAYMENT_AUTHORIZATION'],
-      }}
-      onLoadPaymentData={(paymentRequest) => {
-        props.ggPaySuccess(props.amount);
-
-        console.log('Success', paymentRequest);
-      }}
-      onPaymentAuthorized={(paymentData) => {
-        console.log('Payment Authorised Success', paymentData);
-        return { transactionState: 'SUCCESS' };
-      }}
-      onPaymentDataChanged={(paymentData) => {
-        console.log('On Payment Data Changed', paymentData);
-        return {};
-      }}
-      existingPaymentMethodRequired="false"
-      buttonColor="black"
-      buttonType="donate"
-    />
-  );
 };
 
 const Input = (props) => {
@@ -604,11 +573,11 @@ const Input = (props) => {
         </button>
       </div>
       <input
-        id={'orther' + props.ortherID}
+        id={'other' + props.otherID}
         type="number"
         min="10"
         max="10000"
-        placeholder="Orther"
+        placeholder="other"
         className={
           props.isActive[4]
             ? ' btn btn-outline-info m-2  active'
@@ -616,16 +585,15 @@ const Input = (props) => {
         }
         onChange={() => {
           props.createQR(
-            document.getElementById('orther' + props.ortherID).value
+            document.getElementById('other' + props.otherID).value
           );
-          console.log(document.getElementById('orther' + props.ortherID).value);
         }}
         onClick={() => {
           props.createQR(
-            document.getElementById('orther' + props.ortherID).value
+            document.getElementById('other' + props.otherID).value
           );
 
-          props.toggleClass(4, props.ortherID);
+          props.toggleClass(4, props.otherID);
         }}
       />
     </div>

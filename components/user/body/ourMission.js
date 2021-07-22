@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import Image_home from './image_home';
 const ourMissi = ({ srcImages }) => {
+  let item = new Set();
   function getRandomItem() {
-    let item = [];
     for (let index = 0; index < srcImages.length; index++) {
       if (index > 5) break;
       const randomIndex = Math.floor(Math.random() * srcImages.length);
       const temp = srcImages[randomIndex];
-      item.push(temp);
+      item.add(temp);
     }
     return item;
   }
-  let srcImagesRandom = getRandomItem();
+  let srcImagesRandom = [...getRandomItem()];
 
   return (
     <section className="section section-xl" id="our-mission" data-type="anchor">
@@ -20,9 +20,28 @@ const ourMissi = ({ srcImages }) => {
           <div className="col-lg-6">
             <div className="box-img-animate">
               {srcImagesRandom
-                ? srcImagesRandom.map((srcImage) => (
-                    <Image_home srcImage={srcImage}></Image_home>
-                  ))
+                ? srcImagesRandom.map((srcImage, index) => {
+                    let x, y;
+                    if (index == 0 || index == 4) {
+                      x = 140;
+                      y = 0;
+                    }
+                    if (index == 1) {
+                      x = 0;
+                      y = 150;
+                    }
+                    if (index == 2) {
+                      x = 20;
+                      y = 20;
+                    }
+                    if (index == 3) {
+                      x = 70;
+                      y = 60;
+                    }
+                    return (
+                      <Image_home srcImage={srcImage} x={x} y={y}></Image_home>
+                    );
+                  })
                 : ''}
             </div>
           </div>
