@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import dynamic from 'next/dynamic';
-const OwlCarousel = dynamic(import('react-owl-carousel'));
+
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import Item_partner from './item_partner';
-
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 const Partner = ({ partners }) => {
   return (
     <section
@@ -23,7 +23,7 @@ const Partner = ({ partners }) => {
         </div>
 
         {/* Owl Carousel*/}
-        <OwlCarousel className=" owl-theme  wow fadeInUp owl-loaded dots-offset-lg owl-carousel-lg owl-loaded">
+        <div className="owl-carousel owl-theme  wow fadeInUp owl-loaded dots-offset-lg owl-carousel-lg owl-loaded">
           <div className="owl-stage-outer">
             <div
               className="owl-stage"
@@ -43,7 +43,7 @@ const Partner = ({ partners }) => {
               })}
             </div>
           </div>
-        </OwlCarousel>
+        </div>
       </div>
     </section>
   );

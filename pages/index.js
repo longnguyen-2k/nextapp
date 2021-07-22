@@ -23,7 +23,7 @@ const callAPI = (endpoint) => {
 export const getStaticProps = async () => {
   const news = await callAPI('/news');
   const partners = await callAPI('/partners');
-  const targets = await callAPI('/targets/2');
+  const targets = await callAPI('/targets/1');
   const itnuoiits = await callAPI('/itnuoiit');
   const srcImages = await callAPI('/images');
 

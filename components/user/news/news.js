@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import dynamic from 'next/dynamic';
-const OwlCarousel = dynamic(import('react-owl-carousel'));
+// import dynamic from 'next/dynamic';
+// const OwlCarousel = dynamic(import('react-owl-carousel'));
 import config from '../../api/config';
 import ItemNew from './itemNew';
 import Index from './../index';
-
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 const News = ({ news }) => {
   return (
     <section className="section-lg bg-default" id="news" data-type="anchor">
@@ -16,8 +17,8 @@ const News = ({ news }) => {
           Recent News
         </h3>
         {/* Owl Carousel*/}
-        <OwlCarousel
-          className=" owl-theme  wow fadeInUp owl-loaded"
+        <div
+          className="owl-carousel owl-theme  wow fadeInUp owl-loaded"
           data-items={1}
           data-md-items={2}
           data-lg-items={3}
@@ -48,7 +49,7 @@ const News = ({ news }) => {
               ))}
             </div>
           </div>
-        </OwlCarousel>
+        </div>
       </div>
     </section>
   );

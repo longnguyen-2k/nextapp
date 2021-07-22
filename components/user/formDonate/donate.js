@@ -137,13 +137,13 @@ const Donate = (props) => {
         id="donateModel"
         tabIndex="-1"
         role="dialog"
-        aria-labelledby="donateModel"
+        aria-labelledby="donateModelb"
         aria-hidden="true"
       >
         <div className="modal-dialog modal-xl" role="document">
           <div className="modal-content">
             <div className="modal-header bg-orange">
-              <h5 className="modal-title" id="donateModel">
+              <h5 className="modal-title" id="donateModelb">
                 Donate
               </h5>
               <button
