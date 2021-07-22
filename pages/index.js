@@ -15,7 +15,6 @@ import Donate from '../components/user/formDonate/donate';
 import Body from '../components/user/body/body';
 import axios from 'axios';
 import config from '../components/api/config';
-import GooglePayButton from '@google-pay/button-react';
 
 const callAPI = (endpoint) => {
   return axios.get(config.prefixUrl + endpoint).then((res) => res.data);
